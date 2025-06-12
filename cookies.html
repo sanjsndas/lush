@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Cookies Policy - Lush Pluse Gardening</title>
+<!-- Google Fonts Inter -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&amp;display=swap" rel="stylesheet" />
+<!-- Google Material Icons -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+<style>
+  :root {
+    --color-primary: #2e7d32;
+    --color-secondary: #81c784;
+    --color-accent: #f48fb1;
+    --color-text-primary: #1a1a1a;
+    --color-text-secondary: #6b7280;
+    --color-bg: #f9f9f9;
+    --radius: 12px;
+    --spacing-base: 16px;
+    --transition-duration: 0.3s;
+  }
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: var(--color-bg);
+    color: var(--color-text-primary);
+    line-height: 1.8;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  a {
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: color var(--transition-duration);
+  }
+  a:hover, a:focus {
+    color: var(--color-accent);
+    outline: none;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--radius);
+    display: block;
+  }
+  h1, h2, h3, h4 {
+    color: var(--color-primary);
+    font-weight: 800;
+    margin-bottom: var(--spacing-base);
+    line-height: 1.35;
+  }
+  h1 {
+    font-size: 3.25rem;
+  }
+  h2 {
+    font-size: 2.6rem;
+  }
+  h3 {
+    font-size: 2rem;
+  }
+  p {
+    color: var(--color-text-secondary);
+    font-size: 1.125rem;
+    margin-bottom: var(--spacing-base);
+    max-width: 900px;
+  }
+  ul, ol {
+    margin-left: 2em;
+    margin-bottom: var(--spacing-base);
+    color: var(--color-text-secondary);
+    font-size: 1.125rem;
+  }
+  li {
+    margin-bottom: 0.75em;
+    line-height: 1.6;
+  }
+  blockquote {
+    font-style: italic;
+    margin-left: 1em;
+    margin-right: 1em;
+    color: #555;
+    border-left: 4px solid var(--color-accent);
+    padding-left: 16px;
+    margin-bottom: 1em;
+  }
+  .visually-hidden {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0,0,0,0) !important;
+    border: 0 !important;
+  }
+  .container {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--spacing-base);
+    padding-right: var(--spacing-base);
+    padding-top: 64px;
+    padding-bottom: 96px;
+  }
+  header {
+    background: #ffffffcc;
+    backdrop-filter: saturate(180%) blur(12px);
+    position: sticky;
+    top: 0;
+    z-index: 101;
+    box-shadow: 0 2px 6px rgba(46, 125, 50, 0.15);
+  }
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-base);
+  }
+  .logo {
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .logo .material-icons {
+    font-size: 36px;
+    color: var(--color-accent);
+  }
+  nav {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+  }
+  nav a {
+    font-weight: 600;
+    font-size: 1.125rem;
+    padding: 8px 0;
+    position: relative;
+  }
+  nav a[aria-current="page"] {
+    color: var(--color-accent);
+    font-weight: 700;
+  }
+  nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 4px;
+    background: var(--color-accent);
+    border-radius: 3px;
+    transition: width var(--transition-duration);
+  }
+  nav a:hover::after,
+  nav a:focus::after {
+    width: 100%;
+  }
+  .hamburger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    color: var(--color-primary);
+  }
+  .hamburger .material-icons {
+    font-size: 36px;
+  }
+  .mobile-menu {
+    display: none;
+    flex-direction: column;
+    gap: 16px;
+    background: #fff;
+    padding: 28px var(--spacing-base);
+    box-shadow: 0 8px 32px rgba(46, 125, 50, 0.25);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10000;
+    border-radius: var(--radius) var(--radius) 0 0;
+  }
+  .mobile-menu.show {
+    display: flex;
+  }
+  main h1 {
+    margin-top: 0;
+    margin-bottom: 40px;
+    text-align: center;
+    font-weight: 900;
+  }
+  footer {
+    background: #2e7d32;
+    color: #e6f4ea;
+    padding: 40px var(--spacing-base);
+    text-align: center;
+    font-size: 0.95rem;
+  }
+  footer address {
+    font-style: normal;
+    font-weight: 600;
+    color: #c8e6c9;
+    margin-bottom: 0.75em;
+    display: block;
+  }
+  .cookie-consent {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(46, 125, 50, 0.95);
+    color: white;
+    padding: 20px 28px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10000;
+    font-size: 1.1rem;
+    box-shadow: 0 -3px 12px rgba(0,0,0,0.35);
+    border-radius: var(--radius) var(--radius) 0 0;
+  }
+  .cookie-consent p {
+    flex: 1 1 320px;
+    margin: 0 16px 12px 0;
+    font-weight: 600;
+  }
+  .cookie-consent button {
+    background: var(--color-accent);
+    border: none;
+    border-radius: var(--radius);
+    padding: 12px 26px;
+    font-weight: 900;
+    color: var(--color-primary);
+    cursor: pointer;
+    margin-left: 16px;
+    transition: background-color 0.3s ease;
+    font-size: 1rem;
+    min-width: 100px;
+    text-align: center;
+  }
+  .cookie-consent button:hover,
+  .cookie-consent button:focus {
+    background: #db5c98;
+    outline: none;
+  }
+  @media (min-width: 768px) {
+    .hamburger {
+      display: none;
+    }
+    nav {
+      display: flex !important;
+      gap: 36px;
+    }
+    .mobile-menu {
+      display: none !important;
+    }
+  }
+  @media (max-width: 767px) {
+    nav {
+      display: none;
+    }
+    .hamburger {
+      display: block;
+    }
+  }
+  a:focus-visible, button:focus-visible {
+    outline: 3px solid var(--color-accent);
+    outline-offset: 3px;
+  }
+</style>
+</head>
+<body>
+<header role="banner">
+  <div class="header-inner">
+    <a href="index.html" class="logo" aria-label="Lush Pluse Gardening Home">
+      <span class="material-icons" aria-hidden="true">local_florist</span>
+      Lush Pluse Gardening
+    </a>
+    <nav aria-label="Primary navigation">
+   <a href="index.html" tabindex="0">Home</a>
+        <a href="privacy.html" tabindex="0">Privacy</a>
+        <a href="terms.html" tabindex="0">Terms & conditons</a>
+        <a href="cookies.html"tabindex="0"aria-current="page">Cookies</a>
+        <a href="contact.html" tabindex="0">Contact us</a>
+    </nav>
+    <button class="hamburger" aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle menu">
+      <span class="material-icons">menu</span>
+    </button>
+  </div>
+  <nav id="mobile-menu" class="mobile-menu" aria-label="Mobile navigation">
+    <a href="index.html" tabindex="-1">Home</a>
+    <a href="index.html#services" tabindex="-1">Services</a>
+    <a href="index.html#gallery" tabindex="-1">Gallery</a>
+    <a href="privacy.html" tabindex="-1">Privacy Policy</a>
+    <a href="terms.html" tabindex="-1">Terms and Conditions</a>
+    <a href="contact.html" tabindex="-1">Contact</a>
+    <a href="cookies.html" tabindex="-1" aria-current="page">Cookies Policy</a>
+  </nav>
+</header>
+
+<main class="container" tabindex="-1" role="main">
+  <h1>Cookies Policy</h1>
+
+  <p>
+    Welcome to the Lush Pluse Gardening Cookies Policy. We respect your privacy and strive for the highest level of transparency. This document provides a comprehensive overview of how we utilize cookies and similar tracking technologies on our website to enhance your user experience and operate our digital services effectively. Our goal is to inform you in depth about the types of cookies we use, their purposes, and how you can manage your cookie preferences and rights in a simple, secure, and personalized manner.
+  </p>
+
+  <h2 class="section-title">What Are Cookies?</h2>
+  <p>
+    Cookies are small text files stored on your device by web browsers when you visit websites. These files contain a small amount of data that identifies your device and browser, enabling websites to remember who you are, your preferences, and your activity across browsing sessions. They play a crucial role in providing a smooth and customized browsing experience, allowing websites to offer personalized content, remember login statuses, maintain shopping carts, and much more.
+  </p>
+  <p>
+    The importance of cookies in the modern web cannot be overstated: they serve as the backbone for many online functionalities that users take for granted and are essential for efficient, responsive website operations.
+  </p>
+
+  <h2 class="section-title">Types of Cookies We Use</h2>
+  <p>
+    Lush Pluse Gardening uses a variety of cookie types to fulfill different functions and objectives, each carefully chosen to optimize your experience and maintain your privacy and security:
+  </p>
+  <ul>
+    <li><strong>Strictly Necessary Cookies:</strong> These cookies are indispensable for basic website operation. They enable essential features such as page navigation, secure login processes, session management, and protection against security threats. These cookies do not collect personal information and are always enabled to allow our services to function properly.</li>
+    <li><strong>Performance and Analytics Cookies:</strong> These cookies collect aggregated, anonymized data about how visitors interact with our website, including page visit counts, traffic sources, and site performance metrics. This data enables us to analyze trends, identify problems, and continuously improve our site to better serve you.</li>
+    <li><strong>Functionality Cookies:</strong> These remember your choices, including language preferences, display settings, and geographic region, providing you with a smooth, tailored browsing experience that honors your individual preferences.</li>
+    <li><strong>Advertising and Targeting Cookies:</strong> These cookies allow us and our advertising partners to display advertisements tailored to your interests. They help measure advertisement effectiveness and limit the frequency with which you see the same ad, ensuring ads are relevant and less intrusive. These cookies can be set by third-party advertisers as well as our services.</li>
+  </ul>
+
+  <h2 class="section-title">Purposes for Using Cookies</h2>
+  <p>
+    Our use of cookies supports various purposes that are essential both for you as a user and for Lush Pluse Gardening as a service provider. This includes:
+  </p>
+  <ul>
+    <li>Recognizing and remembering your device and preferences, enhancing convenience and efficiency.</li>
+    <li>Facilitating secure user authentication and authorized access to personal accounts.</li>
+    <li>Analyzing how visitors engage with our website to identify popular content and improve site navigation.</li>
+    <li>Delivering targeted content, promotions, and advertisements that align with your interests, making your experience more personalized.</li>
+    <li>Measuring the reach and success of our marketing campaigns to improve their relevance and effectiveness.</li>
+    <li>Safeguarding our website and user information through security-related cookies.</li>
+  </ul>
+
+  <h2 class="section-title">Use of Third-Party Cookies</h2>
+  <p>
+    We utilize services provided by reputable third parties, which may set their own cookies on your device for purposes such as analytics, advertising, and social media integration. These third parties operate under their own privacy policies and data protection regulations, and we encourage you to review their policies to understand their practices and your rights.
+  </p>
+  <p>
+    Examples include Google Analytics for site performance analysis, social media widgets for sharing, and advertising networks for personalized ad delivery.
+  </p>
+
+  <h2 class="section-title">Managing Your Cookie Preferences</h2>
+  <p>
+    We respect your right to control how cookies are used on your device. We provide the following options:
+  </p>
+  <ul>
+    <li><strong>Cookie Consent Banner:</strong> On your first visit, a banner will appear asking for your consent to use non-essential cookies. You can accept or decline, and your choice will be remembered.</li>
+    <li><strong>Browser Controls:</strong> Adjust cookie settings in your browser to block or delete existing cookies. Keep in mind some features may be limited without cookies.</li>
+    <li><strong>Opt-Out Options:</strong> Certain advertising cookies can be managed through industry opt-out pages such as YourOnlineChoices and Google Ad Settings.</li>
+  </ul>
+  <p>
+    We recommend you periodically review your cookie settings to maintain compliance with your preferences and privacy standards.
+  </p>
+
+  <h2 class="section-title">Details on Cookie Duration and Lifespan</h2>
+  <p>
+    Cookies on our site vary in lifespan:
+  </p>
+  <ul>
+    <li><strong>Session Cookies:</strong> Temporary cookies that expire when you close your browser session, helping with navigation continuity.</li>
+    <li><strong>Persistent Cookies:</strong> Stored on your device for a predefined period (weeks, months, or years) to remember your preferences and identity across sessions.</li>
+    <li><strong>Third-Party Cookies:</strong> Their duration depends on the third-party’s own policies and can also be managed through your browser or directly with the third party.</li>
+  </ul>
+
+  <h2 class="section-title">Security of Your Data and Cookies</h2>
+  <p>
+    We implement industry-standard security technologies and practices such as SSL encryption, access controls, and encrypted storage to protect data collected via cookies from unauthorized access, alteration, disclosure, or destruction.
+  </p>
+  <p>
+    While we strive to maintain high levels of security, no system can guarantee absolute protection. We therefore encourage all users to exercise caution and manage cookie usage according to their comfort levels.
+  </p>
+
+  <h2 class="section-title">Legal Basis for Cookie Usage</h2>
+  <p>
+    Where required by data protection laws including the General Data Protection Regulation (GDPR) and the California Consumer Privacy Act (CCPA), we rely on your explicit consent before placing non-essential cookies on your device. Essential cookies necessary for website operation are exempt from consent requirements but used solely for functional purposes.
+  </p>
+
+  <h2 class="section-title">Updates to Our Cookies Policy</h2>
+  <p>
+    This Cookies Policy may be updated from time to time to reflect changes in our practices, technologies, or legal obligations. Updates will be posted on this page along with the date of last revision. Significant changes may be communicated through banners or emails. We encourage you to review this document regularly.
+  </p>
+
+  <h2 class="section-title">Additional Information About Our Use of Cookies</h2>
+  <p>
+    Beyond the core information above, here are additional details that illustrate our commitment to transparency and your control:
+  </p>
+  <ul>
+    <li><strong>Cookie Categorization:</strong> We categorize cookies clearly on our website, enabling you to make informed decisions about which types you allow or reject.</li>
+    <li><strong>Detailed Cookie Table:</strong> In some pages and communications, we provide tables describing each cookie’s purpose, lifespan, and data collected.</li>
+    <li><strong>Custom Cookie Control Panel:</strong> Where possible, users can modify cookie settings on a granular level instead of blanket acceptance or rejection.</li>
+    <li><strong>Data Minimization:</strong> We collect only the minimum amount of data necessary for legitimate purposes.</li>
+    <li><strong>Third-Party Audits:</strong> Selected partners undergo regular audits to ensure compliance with privacy and security standards.</li>
+    <li><strong>Cookie Syncing Policy:</strong> We review and control cookie syncing practices between third parties to foster privacy protection.</li>
+  </ul>
+
+  <h2 class="section-title">Cookie Policy FAQs</h2>
+  <dl>
+    <dt>What are cookies?</dt>
+    <dd>Cookies are small pieces of data stored on your device by websites to help provide a personalized experience and collect analytics data.</dd>
+    <dt>Can I disable cookies?</dt>
+    <dd>Yes, you can manage cookies through your browser settings or via our cookie consent banner. However, disabling some cookies may reduce site functionality.</dd>
+    <dt>Why do some cookies require my consent?</dt>
+    <dd>Certain cookies collect personal preferences or track you for marketing purposes, so regulations require that we obtain your explicit permission for these.</dd>
+    <dt>Are cookies harmful?</dt>
+    <dd>No, cookies are not malicious programs. However, managing your cookie privacy is important for control over your data and online footprint.</dd>
+    <dt>How long do cookies last?</dt>
+    <dd>Cookie lifespans vary from end of session to several years, depending on their purpose and settings.</dd>
+  </dl>
+
+  <h2 class="section-title">Contacting Us</h2>
+  <p>
+    For further questions or to exercise your rights related to cookies and tracking on our website, please contact our dedicated team:
+  </p>
+  <p>
+    <strong>Email:</strong> cookies@lushplusegardening.com<br />
+    <strong>Phone:</strong> (800) 232-7898<br />
+    <strong>Address:</strong> 55 Clark St, Brooklyn, NY 11201, USA
+  </p>
+
+  <p>
+    We are committed to providing you with clarity, respect, and high standards of privacy and user experience.
+  </p>
+</main>
+
+<footer role="contentinfo">
+  <div class="container">
+    <address>
+      55 Clark St, Brooklyn, NY 11201, USA<br />
+      Phone: (800) 232-7898
+    </address>
+    <p>© 2024 Lush Pluse Gardening. All rights reserved.</p>
+  </div>
+</footer>
+
+<div class="cookie-consent" role="dialog" aria-live="polite" aria-label="Cookie consent notification" id="cookieConsent">
+  <p>
+    We use cookies to optimize our website and services. By clicking "Accept" you consent to the use of all cookies. You may also choose to decline non-essential cookies.
+  </p>
+  <div>
+    <button id="acceptCookies" type="button">Accept</button>
+    <button id="declineCookies" type="button">Decline</button>
+  </div>
+</div>
+
+<script>
+  const hamburger = document.querySelector('.hamburger');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const cookieConsent = document.getElementById('cookieConsent');
+  const acceptBtn = document.getElementById('acceptCookies');
+  const declineBtn = document.getElementById('declineCookies');
+
+  hamburger.addEventListener('click', () => {
+    const expanded = hamburger.getAttribute('aria-expanded') === 'true';
+    hamburger.setAttribute('aria-expanded', String(!expanded));
+    mobileMenu.classList.toggle('show');
+  });
+
+  mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.remove('show');
+      hamburger.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if(event.key === 'Escape' && mobileMenu.classList.contains('show')) {
+      mobileMenu.classList.remove('show');
+      hamburger.setAttribute('aria-expanded', 'false');
+      hamburger.focus();
+    }
+  });
+
+  function setCookie(name, value, days) {
+    const d = new Date();
+    d.setTime(d.getTime() + (days*24*60*60*1000));
+    const expires = "expires="+ d.toUTCString();
+    document.cookie = name + "=" + value + ";" + expires + ";path=/;SameSite=Lax";
+  }
+  function getCookie(name) {
+    const cname = name + "=";
+    const decodedCookie = decodeURIComponent(document.cookie);
+    const ca = decodedCookie.split(';');
+    for(let i = 0; i < ca.length; i++) {
+      let c = ca[i];
+      while(c.charAt(0) === ' ') c = c.substring(1);
+      if(c.indexOf(cname) === 0) return c.substring(cname.length, c.length);
+    }
+    return "";
+  }
+  function checkCookieConsent() {
+    const consent = getCookie("cookieConsent");
+    if(consent === "accepted" || consent === "declined") {
+      cookieConsent.style.display = "none";
+    } else {
+      cookieConsent.style.display = "flex";
+    }
+  }
+  acceptBtn.addEventListener('click', () => {
+    setCookie("cookieConsent", "accepted", 365);
+    cookieConsent.style.display = "none";
+  });
+  declineBtn.addEventListener('click', () => {
+    setCookie("cookieConsent", "declined", 365);
+    cookieConsent.style.display = "none";
+  });
+  checkCookieConsent();
+</script>
+</body>
+</html>

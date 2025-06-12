@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Privacy Policy - Lush Pluse Gardening</title>
+<!-- Google Fonts Inter -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+<!-- Google Material Icons -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+<style>
+  :root {
+    --color-primary: #2e7d32;
+    --color-secondary: #81c784;
+    --color-accent: #f48fb1;
+    --color-text-primary: #1a1a1a;
+    --color-text-secondary: #6b7280;
+    --color-bg: #f9f9f9;
+    --radius: 12px;
+    --spacing-base: 16px;
+    --transition-duration: 0.3s;
+  }
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: var(--color-bg);
+    color: var(--color-text-primary);
+    line-height: 1.6;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  a {
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: color var(--transition-duration);
+  }
+  a:hover, a:focus {
+    color: var(--color-accent);
+    outline: none;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--radius);
+    display: block;
+  }
+  h1, h2, h3, h4 {
+    color: var(--color-primary);
+    font-weight: 800;
+    margin-bottom: var(--spacing-base);
+    line-height: 1.25;
+  }
+  h1 {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 2.25rem;
+  }
+  h3 {
+    font-size: 1.75rem;
+  }
+  p {
+    color: var(--color-text-secondary);
+    font-size: 1rem;
+    margin-bottom: var(--spacing-base);
+  }
+  ul {
+    margin-left: 1.5em;
+    margin-bottom: var(--spacing-base);
+    color: var(--color-text-secondary);
+  }
+  .visually-hidden {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0,0,0,0) !important;
+    border: 0 !important;
+  }
+  .container {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--spacing-base);
+    padding-right: var(--spacing-base);
+    padding-top: 64px;
+    padding-bottom: 80px;
+  }
+  header {
+    background: #ffffffcc;
+    backdrop-filter: saturate(180%) blur(12px);
+    position: sticky;
+    top: 0;
+    z-index: 101;
+    box-shadow: 0 2px 6px rgba(46, 125, 50, 0.15);
+  }
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-base);
+  }
+  .logo {
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .logo .material-icons {
+    font-size: 32px;
+    color: var(--color-accent);
+  }
+  nav {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+  nav a {
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 8px 0;
+    position: relative;
+  }
+  nav a[aria-current="page"] {
+    color: var(--color-accent);
+    font-weight: 700;
+  }
+  nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    background: var(--color-accent);
+    border-radius: 2px;
+    transition: width var(--transition-duration);
+  }
+  nav a:hover::after,
+  nav a:focus::after {
+    width: 100%;
+  }
+  .hamburger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    color: var(--color-primary);
+  }
+  .hamburger .material-icons {
+    font-size: 32px;
+  }
+  .mobile-menu {
+    display: none;
+    flex-direction: column;
+    gap: 16px;
+    background: #fff;
+    padding: 24px var(--spacing-base);
+    box-shadow: 0 8px 24px rgba(46, 125, 50, 0.15);
+    position: absolute;
+    top: 64px;
+    right: 0;
+    left: 0;
+    z-index: 100;
+  }
+  .mobile-menu.show {
+    display: flex;
+  }
+  main h1 {
+    margin-top: 0;
+    margin-bottom: 32px;
+    text-align: center;
+    font-weight: 900;
+  }
+  .section-title {
+    font-weight: 800;
+    font-size: 2rem;
+    margin-top: 48px;
+    margin-bottom: 24px;
+    border-bottom: 2px solid var(--color-primary);
+    padding-bottom: 8px;
+  }
+  footer {
+    background: #2e7d32;
+    color: #e6f4ea;
+    padding: 32px var(--spacing-base);
+    text-align: center;
+    font-size: 0.9rem;
+  }
+  footer address {
+    font-style: normal;
+    font-weight: 600;
+    color: #c8e6c9;
+    margin-bottom: 0.5em;
+    display: block;
+  }
+  @media (min-width: 768px) {
+    .hamburger {
+      display: none;
+    }
+    nav {
+      display: flex !important;
+      gap: 32px;
+    }
+    .mobile-menu {
+      display: none !important;
+    }
+  }
+  @media (max-width: 767px) {
+    nav {
+      display: none;
+    }
+    .hamburger {
+      display: block;
+    }
+  }
+  a:focus-visible, button:focus-visible {
+    outline: 3px solid var(--color-accent);
+    outline-offset: 3px;
+  }
+</style>
+</head>
+<body>
+<header role="banner">
+  <div class="header-inner">
+    <a href="index.html" class="logo" aria-label="Lush Pluse Gardening Home">
+      <span class="material-icons" aria-hidden="true">local_florist</span>
+      Lush Pluse Gardening
+    </a>
+    <nav aria-label="Primary navigation">
+      <a href="index.html" tabindex="0">Home</a>
+        <a href="privacy.html" tabindex="0"aria-current="page">Privacy</a>
+        <a href="terms.html" tabindex="0">Terms & conditons</a>
+        <a href="cookies.html"tabindex="0">Cookies</a>
+        <a href="contact.html" tabindex="0">Contact us</a>
+    </nav>
+    <button class="hamburger" aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle menu">
+      <span class="material-icons">menu</span>
+    </button>
+  </div>
+  <nav id="mobile-menu" class="mobile-menu" aria-label="Mobile navigation">
+       <a href="index.html" tabindex="0">Home</a>
+        <a href="privacy.html" tabindex="0"aria-current="page">Privacy</a>
+        <a href="terms.html" tabindex="0">Terms & conditons</a>
+        <a href="cookies.html"tabindex="0">Cookies</a>
+        <a href="contact.html" tabindex="0">Contact us</a>
+  </nav>
+</header>
+
+<main class="container" tabindex="-1" role="main">
+  <h1>Privacy Policy</h1>
+
+  <p>
+    At Lush Pluse Gardening, your privacy is paramount. We are committed to protecting your personal data and being transparent about how we collect, use, and safeguard your information. This Privacy Policy outlines the ways in which your information is collected when you visit our website, engage with our services, or communicate with us, along with the rights you have related to your personal data.
+  </p>
+
+  <h2 class="section-title">1. Information We Collect</h2>
+
+  <p>
+    We collect personal and non-personal information through your interactions with our website and services. This information allows us to provide a seamless, personalized experience while respecting your privacy and security.
+  </p>
+
+  <h3>1.1 Personal Data You Provide</h3>
+
+  <p>
+    When you contact us, fill out forms, create an account, or request services, we collect personal information including:
+  </p>
+
+  <ul>
+    <li>Your full name and contact details, including email addresses and phone numbers;</li>
+    <li>Postal and billing addresses;</li>
+    <li>Payment information processed securely by third-party payment gateways;</li>
+    <li>Other information voluntarily provided such as preferences, feedback, and inquiries.</li>
+  </ul>
+
+  <h3>1.2 Information Collected Automatically</h3>
+
+  <p>
+    When you visit our website, we may automatically collect data about your device and browsing activities, such as:
+  </p>
+
+  <ul>
+    <li>IP address and approximate geographic location;</li>
+    <li>Browser type, language, and settings;</li>
+    <li>Referring and exit pages;</li>
+    <li>Timestamp and duration of page visits;</li>
+    <li>Clicks, scroll behavior, and interaction data.</li>
+  </ul>
+
+  <h3>1.3 Cookies and Similar Technologies</h3>
+
+  <p>
+    We utilize cookies, web beacons, and similar technologies to enhance your online experience. These technologies help us remember your preferences, track usage statistics, and deliver content tailored to your interests.
+  </p>
+
+  <p>
+    You have control over cookies via your browser settings, and you can opt to restrict or block cookies; please note that some features of our site may not function optimally without these technologies enabled.
+  </p>
+
+  <h2 class="section-title">2. How We Use Your Information</h2>
+
+  <p>
+    The data collected is used for a variety of purposes aimed at providing and improving our services, including:
+  </p>
+
+  <ul>
+    <li>Processing your requests, orders, and inquiries;</li>
+    <li>Personalizing website content and enhancing user experience;</li>
+    <li>Sending promotional offers, newsletters, and updates, with your consent;</li>
+    <li>Protecting the security and integrity of our website and user data;</li>
+    <li>Analyzing site traffic and usage trends;</li>
+    <li>Adhering to applicable laws and regulations.</li>
+  </ul>
+
+  <p>
+    We evaluate our practices regularly to ensure effective and responsible data use.
+  </p>
+
+  <h2 class="section-title">3. Cookies in Depth</h2>
+
+  <p>
+    Our website uses distinct categories of cookies:
+  </p>
+
+  <ul>
+    <li><strong>Strictly Necessary:</strong> Essential cookies to enable site functionality and security.</li>
+    <li><strong>Performance:</strong> Cookies that collect anonymous analytics to monitor site performance and usage.</li>
+    <li><strong>Functionality:</strong> Remember your preferences such as language or location.</li>
+    <li><strong>Targeting/Advertising:</strong> Used by third parties to deliver relevant advertisements based on browsing history.</li>
+  </ul>
+
+  <p>
+    We recommend reviewing your browser's cookie management tools and the privacy policies of third-party providers for more information.
+  </p>
+
+  <h2 class="section-title">4. Sharing and Disclosure of Information</h2>
+
+  <p>
+    We respect your privacy and do not sell or rent your personal information. Information may be shared only in the following limited ways:
+  </p>
+
+  <ul>
+    <li><strong>Service Providers:</strong> Companies assisting in our operations, such as hosting, analytics, payment processing, and marketing, are granted access only to the data necessary to perform their functions and are obligated to safeguard it.</li>
+    <li><strong>Legal Requirements:</strong> We may disclose information if required by law, legal process, or government authorities.</li>
+    <li><strong>Business Transactions:</strong> In the event of mergers, acquisitions, or asset sales, your data might be transferred to the new entity with privacy protections maintained.</li>
+  </ul>
+
+  <h2 class="section-title">5. Data Security Measures</h2>
+
+  <p>
+    Implementing robust security measures is vital. We protect your information by utilizing:
+  </p>
+
+  <ul>
+    <li>Secure socket layer (SSL) encryption for data in transit;</li>
+    <li>Secure servers with industry-standard protections;</li>
+    <li>Access controls limiting data to authorized personnel;</li>
+    <li>Regular security assessments and protocol updates;</li>
+    <li>Employee training on privacy and security best practices.</li>
+  </ul>
+
+  <p>
+    Despite these efforts, please understand that no system is entirely impervious to cyber threats, and we urge you to practice strong password security and caution online.
+  </p>
+
+  <h2 class="section-title">6. Your Privacy Rights</h2>
+
+  <p>
+    Depending on your location and applicable laws, you may be entitled to:
+  </p>
+
+  <ul>
+    <li>Request access to your personal information and receive a copy;</li>
+    <li>Seek correction or update of inaccurate or incomplete data;</li>
+    <li>Request deletion of personal information, subject to exceptions;</li>
+    <li>Object to or restrict processing for certain purposes;</li>
+    <li>Request data portability to another service provider;</li>
+    <li>Withdraw consent where data processing is based on consent;</li>
+    <li>File a complaint with a data protection authority if unsatisfied.</li>
+  </ul>
+
+  <p>
+    To exercise these rights, please contact us promptly with sufficient details to identify and address your request.
+  </p>
+
+  <h2 class="section-title">7. Children’s Privacy</h2>
+
+  <p>
+    We do not knowingly collect or solicit personal information from children under 13 without parental consent. Our services and website are not intended for underage users. If you believe your child has provided us personal data without appropriate consent, please contact us immediately to remove it.
+  </p>
+
+  <h2 class="section-title">8. Third-Party Links and Services</h2>
+
+  <p>
+    Our website may contain links to other sites or services not operated by us. We have no control over their content or policies, and we encourage you to review their privacy practices before sharing information.
+  </p>
+
+  <h2 class="section-title">9. International Data Transfers</h2>
+
+  <p>
+    As a U.S.-based business, your information may be stored and processed in the United States or other countries where we and our partners operate. These countries may have different data protection laws. By using our services, you consent to such transfers subject to appropriate safeguards.
+  </p>
+
+  <h2 class="section-title">10. Policy Updates</h2>
+
+  <p>
+    We may update this Privacy Policy periodically to reflect changes in our data handling practices or legal requirements. Substantial changes will be communicated through notices on our website or direct communication where applicable. We recommend reviewing this policy regularly to stay informed.
+  </p>
+
+  <h2 class="section-title">11. Extensive Detail on Data Usage and Handling</h2>
+
+  <p>
+    We treat your data with care and limit usage to provide high-quality gardening services, improve our offerings, and maintain communication. Our data processing bases include legitimate interests, contractual necessity, consent, and legal obligations. We do not process sensitive categories of data without explicit consent.
+  </p>
+
+  <p>
+    Data minimization principles guide our collection practices; we collect only information necessary for the intended purposes and retain it only as needed. Regular data audits ensure obsolete or unnecessary information is securely deleted.
+  </p>
+
+  <h3>11.1 Analytics and Performance Measurement</h3>
+
+  <p>
+    We use privacy-compliant analytics tools to understand website usage, identify trends, and enhance user experience. Anonymized or aggregated data is preferred to protect individual identities. We do not share raw user data with unauthorized third parties.
+  </p>
+
+  <h3>11.2 Marketing Communications</h3>
+
+  <p>
+    When you provide consent, we send you marketing emails or notifications about products, services, and events. These communications include easy opt-out options. We never share your contact information with marketers without permission.
+  </p>
+
+  <h3>11.3 Data Sharing with Service Providers</h3>
+
+  <p>
+    Our service providers are thoroughly vetted and obligated to implement appropriate security measures and privacy safeguards. Agreements restrict their use of your data to the scope of services provided.
+  </p>
+
+  <h3>11.4 Data Breach Procedures</h3>
+
+  <p>
+    In the unlikely event of a data breach compromising personal information, we have protocols to promptly notify affected users and relevant authorities, investigate the incident, and mitigate risks.
+  </p>
+
+  <h2 class="section-title">12. User Responsibilities and Best Practices</h2>
+
+  <p>
+    We encourage users to maintain strong passwords, avoid sharing account information, and regularly review account activity. Use caution when clicking links or providing information, especially on third-party platforms.
+  </p>
+
+  <h2 class="section-title">13. Cookies and Tracking Technologies Explained</h2>
+
+  <p>
+    Cookies support website functionality but also facilitate targeted advertising and usage analysis. We utilize technologies like local storage and pixel tags enhancing service quality. You control cookies via browser settings and can delete cookies at any time.
+  </p>
+
+  <h2 class="section-title">14. Children's Online Privacy Protection Act (COPPA)</h2>
+
+  <p>
+    We comply with COPPA requirements ensuring appropriate parental consent for collection of information from children under 13. Our services do not intentionally solicit such data without consent.
+  </p>
+
+  <h2 class="section-title">15. Data Protection Officer (DPO) and Contact Information</h2>
+
+  <p>
+    We have appointed a Data Protection Officer responsible for overseeing data privacy compliance, user requests, and policy updates. You can contact our DPO at <a href="mailto:privacy@lushplusegardening.com">privacy@lushplusegardening.com</a>.
+  </p>
+
+  <h2 class="section-title">16. Governing Law and Jurisdiction</h2>
+
+  <p>
+    This Privacy Policy is governed by and construed in accordance with the laws of the State of New York, USA. Any disputes arising in connection with this policy will be subject to the exclusive jurisdiction of the courts in New York.
+  </p>
+
+  <h2 class="section-title">17. Comprehensive FAQs on Privacy</h2>
+
+  <h3>What types of personal information do you collect?</h3>
+  <p>We collect identifying, contact, usage, and transactional data needed to provide services and improve your experience.</p>
+
+  <h3>How can I access or update my data?</h3>
+  <p>Contact us by email or phone, and we will facilitate your data requests promptly.</p>
+
+  <h3>Can I opt out of marketing emails?</h3>
+  <p>Yes, all marketing communications include unsubscribe options for your convenience.</p>
+
+  <h3>How do you protect my data?</h3>
+  <p>Using encryption, secure servers, access controls, and regular staff training, we strive to protect your data rigorously.</p>
+
+  <h3>Do you share data with third parties?</h3>
+  <p>Only with trusted service providers bound by confidentiality agreements or as legally required.</p>
+
+  <h3>Are cookies safe?</h3>
+  <p>Yes, they are small text files that enhance your experience. You can control or delete them using your browser settings.</p>
+
+  <h3>What happens if the policy changes?</h3>
+  <p>We notify you of significant changes; please review this policy periodically for updates.</p>
+
+  <h3>Who do I contact regarding privacy concerns?</h3>
+  <p>Reach out to privacy@lushplusegardening.com or call (123) 456-7890.</p>
+
+  <h2 class="section-title">18. Privacy Policy Effective Date</h2>
+
+  <p>
+    This policy is effective as of June 2024 and will remain in effect until updated. Your continued use of our website and services indicates your acceptance of this Privacy Policy.
+  </p>
+
+  <p>
+    We appreciate your trust and look forward to providing you with excellent gardening services while respecting and protecting your privacy every step of the way.
+  </p>
+
+  <p>
+    <em>Thank you for choosing Lush Pluse Gardening.</em>
+  </p>
+</main>
+
+<footer role="contentinfo">
+  <div class="container">
+    <address>
+      55 Clark St, Brooklyn, NY 11201, USA<br />
+      Phone: (800) 232-7898
+    </address>
+    <p>© 2024 Lush Pluse Gardening. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  const hamburger = document.querySelector('.hamburger');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  hamburger.addEventListener('click', () => {
+    const expanded = hamburger.getAttribute('aria-expanded') === 'true';
+    hamburger.setAttribute('aria-expanded', String(!expanded));
+    mobileMenu.classList.toggle('show');
+  });
+
+  mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.remove('show');
+      hamburger.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if(event.key === 'Escape' && mobileMenu.classList.contains('show')) {
+      mobileMenu.classList.remove('show');
+      hamburger.setAttribute('aria-expanded', 'false');
+      hamburger.focus();
+    }
+  });
+</script>
+</body>
+</html>
+

@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Terms and Conditions - Lush Pluse Gardening</title>
+<!-- Google Fonts Inter -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+<!-- Google Material Icons -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+<style>
+  :root {
+    --color-primary: #2e7d32;
+    --color-secondary: #81c784;
+    --color-accent: #f48fb1;
+    --color-text-primary: #1a1a1a;
+    --color-text-secondary: #6b7280;
+    --color-bg: #f9f9f9;
+    --radius: 12px;
+    --spacing-base: 16px;
+    --transition-duration: 0.3s;
+  }
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: var(--color-bg);
+    color: var(--color-text-primary);
+    line-height: 1.6;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  a {
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: color var(--transition-duration);
+  }
+  a:hover, a:focus {
+    color: var(--color-accent);
+    outline: none;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--radius);
+    display: block;
+  }
+  h1, h2, h3, h4 {
+    color: var(--color-primary);
+    font-weight: 800;
+    margin-bottom: var(--spacing-base);
+    line-height: 1.25;
+  }
+  h1 {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 2.25rem;
+  }
+  h3 {
+    font-size: 1.75rem;
+  }
+  p {
+    color: var(--color-text-secondary);
+    font-size: 1rem;
+    margin-bottom: var(--spacing-base);
+  }
+  ul {
+    margin-left: 1.5em;
+    margin-bottom: var(--spacing-base);
+    color: var(--color-text-secondary);
+  }
+  ol {
+    margin-left: 1.5em;
+    margin-bottom: var(--spacing-base);
+    color: var(--color-text-secondary);
+  }
+  .visually-hidden {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0,0,0,0) !important;
+    border: 0 !important;
+  }
+  .container {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--spacing-base);
+    padding-right: var(--spacing-base);
+    padding-top: 64px;
+    padding-bottom: 80px;
+  }
+  header {
+    background: #ffffffcc;
+    backdrop-filter: saturate(180%) blur(12px);
+    position: sticky;
+    top: 0;
+    z-index: 101;
+    box-shadow: 0 2px 6px rgba(46, 125, 50, 0.15);
+  }
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-base);
+  }
+  .logo {
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .logo .material-icons {
+    font-size: 32px;
+    color: var(--color-accent);
+  }
+  nav {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+  nav a {
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 8px 0;
+    position: relative;
+  }
+  nav a[aria-current="page"] {
+    color: var(--color-accent);
+    font-weight: 700;
+  }
+  nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    background: var(--color-accent);
+    border-radius: 2px;
+    transition: width var(--transition-duration);
+  }
+  nav a:hover::after,
+  nav a:focus::after {
+    width: 100%;
+  }
+  .hamburger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    color: var(--color-primary);
+  }
+  .hamburger .material-icons {
+    font-size: 32px;
+  }
+  .mobile-menu {
+    display: none;
+    flex-direction: column;
+    gap: 16px;
+    background: #fff;
+    padding: 24px var(--spacing-base);
+    box-shadow: 0 8px 24px rgba(46, 125, 50, 0.15);
+    position: absolute;
+    top: 64px;
+    right: 0;
+    left: 0;
+    z-index: 100;
+  }
+  .mobile-menu.show {
+    display: flex;
+  }
+  main h1 {
+    margin-top: 0;
+    margin-bottom: 32px;
+    text-align: center;
+    font-weight: 900;
+  }
+  .section-title {
+    font-weight: 800;
+    font-size: 2rem;
+    margin-top: 48px;
+    margin-bottom: 24px;
+    border-bottom: 2px solid var(--color-primary);
+    padding-bottom: 8px;
+  }
+  footer {
+    background: #2e7d32;
+    color: #e6f4ea;
+    padding: 32px var(--spacing-base);
+    text-align: center;
+    font-size: 0.9rem;
+  }
+  footer address {
+    font-style: normal;
+    font-weight: 600;
+    color: #c8e6c9;
+    margin-bottom: 0.5em;
+    display: block;
+  }
+  @media (min-width: 768px) {
+    .hamburger {
+      display: none;
+    }
+    nav {
+      display: flex !important;
+      gap: 32px;
+    }
+    .mobile-menu {
+      display: none !important;
+    }
+  }
+  @media (max-width: 767px) {
+    nav {
+      display: none;
+    }
+    .hamburger {
+      display: block;
+    }
+  }
+  a:focus-visible, button:focus-visible {
+    outline: 3px solid var(--color-accent);
+    outline-offset: 3px;
+  }
+</style>
+</head>
+<body>
+<header role="banner">
+  <div class="header-inner">
+    <a href="index.html" class="logo" aria-label="Lush Pluse Gardening Home">
+      <span class="material-icons" aria-hidden="true">local_florist</span>
+      Lush Pluse Gardening
+    </a>
+    <nav aria-label="Primary navigation">
+      <a href="index.html" tabindex="0">Home</a>
+        <a href="privacy.html" tabindex="0">Privacy</a>
+        <a href="terms.html" tabindex="0"aria-current="page">Terms & conditons</a>
+        <a href="cookies.html"tabindex="0">Cookies</a>
+        <a href="contact.html" tabindex="0">Contact us</a>
+    </nav>
+    <button class="hamburger" aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle menu">
+      <span class="material-icons">menu</span>
+    </button>
+  </div>
+  <nav id="mobile-menu" class="mobile-menu" aria-label="Mobile navigation">
+    <a href="index.html" tabindex="0">Home</a>
+        <a href="privacy.html" tabindex="0">Privacy</a>
+        <a href="terms.html" tabindex="0"aria-current="page">Terms & conditons</a>
+        <a href="cookies.html"tabindex="0">Cookies</a>
+        <a href="contact.html" tabindex="0">Contact us</a>
+  </nav>
+</header>
+
+<main class="container" tabindex="-1" role="main">
+  <h1>Terms and Conditions</h1>
+
+  <p>
+  Welcome to Lush Pluse Gardening. These Terms and Conditions (the “Terms”) govern your access to and use of our services, website, and related communications. By using our site or services, you agree to abide by these Terms. Please read carefully before proceeding.
+  </p>
+
+  <h2 class="section-title">1. Acceptance of Terms</h2>
+  <p>
+  Your use of our website and services constitutes your acceptance of these Terms. If you do not agree, please do not use our services or website. We reserve the right to update or modify these Terms at any time, and such revisions are effective immediately upon posting. Continued use after changes means acceptance of new Terms.
+  </p>
+
+  <h2 class="section-title">2. Description of Services</h2>
+  <p>
+  Lush Pluse Gardening offers comprehensive gardening, landscaping, maintenance, and related services including lawn care, planting, pruning, pest control, irrigation, and lighting installations. Service details are described on the website and are subject to change based on availability, location, and demand.
+  </p>
+  <p>
+  We strive for excellence and customer satisfaction but do not guarantee specific outcomes as results may vary depending on conditions beyond our control such as weather and soil quality.
+  </p>
+
+  <h2 class="section-title">3. User Obligations</h2>
+  <p>
+  As a client or website user, you agree to provide accurate information, grant access as needed for service delivery, and engage respectfully with our staff and systems. You acknowledge responsibility for communicating special conditions or hazards on your property.
+  </p>
+  <p>
+  Any breach of these obligations may result in suspension or termination of services or site access.
+  </p>
+
+  <h2 class="section-title">4. Payment Terms and Conditions</h2>
+  <p>
+  Our service fees are outlined on the website or proposals. Payments are due according to invoice terms, typically prior to or promptly after service completion. We accept various payment methods with secure processing.
+  </p>
+  <p>
+  Late payments may incur interest, service delays, or collections actions. Refunds or adjustments are provided as per agreement or law.
+  </p>
+
+  <h2 class="section-title">5. Scheduling and Cancellation Policy</h2>
+  <p>
+  Service appointments are scheduled based on availability. Clients should provide at least 24 hours notice for cancellations or rescheduling. Failure to do so may result in fees or service interruptions.
+  </p>
+  <p>
+  We reserve the right to cancel or postpone services due to safety concerns, weather, or uncontrollable circumstances with prompt notification.
+  </p>
+
+  <h2 class="section-title">6. Limitations on Liability</h2>
+  <p>
+  Lush Pluse Gardening is not liable for indirect, incidental, consequential, punitive, or special damages arising from services or website use. Our total liability is limited to the amount paid for services.
+  </p>
+  <p>
+  We disclaim warranties except to the extent explicitly stated.
+  </p>
+
+  <h2 class="section-title">7. Intellectual Property</h2>
+  <p>
+  All content including text, images, logos, and designs on the website are protected intellectual property of Lush Pluse Gardening or its licensors. You may not reproduce or distribute without authorization.
+  </p>
+
+  <h2 class="section-title">8. Privacy Policy</h2>
+  <p>
+  Your use of our services is also governed by our <a href="privacy.html">Privacy Policy</a> which details how we collect, store, and protect your personal information.
+  </p>
+
+  <h2 class="section-title">9. Indemnity</h2>
+  <p>
+  You agree to indemnify and hold harmless Lush Pluse Gardening and its affiliates from claims, losses, damages, expenses, or liabilities arising out of your use of our services or site, violation of these Terms, or infringement of rights.
+  </p>
+
+  <h2 class="section-title">10. Termination</h2>
+  <p>
+  We may terminate or suspend your access to services or website without notice for breaches, unlawful behavior, or other reasons. Termination does not affect accrued rights or remedies.
+  </p>
+
+  <h2 class="section-title">11. Dispute Resolution</h2>
+  <p>
+  We seek amicable resolution of any disputes. If unresolved through negotiation, disputes will be settled via binding arbitration in New York under applicable laws.
+  </p>
+
+  <h2 class="section-title">12. Force Majeure</h2>
+  <p>
+  We are not liable for disruptions due to causes beyond reasonable control like natural disasters, war, pandemics, or technical failures.
+  </p>
+
+  <h2 class="section-title">13. User Content and Feedback</h2>
+  <p>
+  Any feedback or content you provide to us may be used without restriction for improving services.
+  </p>
+
+  <h2 class="section-title">14. Website Use Rules</h2>
+  <p>
+  You agree to use our website lawfully and avoid interference or unauthorized access.
+  </p>
+
+  <h2 class="section-title">15. Notices</h2>
+  <p>
+  We may provide notices electronically via email or site postings.
+  </p>
+
+  <h2 class="section-title">16. Governing Law</h2>
+  <p>
+  These Terms are governed by New York law.
+  </p>
+
+  <h2 class="section-title">17. Entire Agreement</h2>
+  <p>
+  These Terms together with Privacy Policy constitute the entire agreement.
+  </p>
+
+  <h2 class="section-title">18. Additional Provisions</h2>
+  <p>
+  <strong>Severability:</strong> If any provision is invalid, others remain effective.<br />
+  <strong>Waiver:</strong> Failure to enforce does not waive rights.<br />
+  <strong>Assignment:</strong> We may assign our rights without your consent.
+  </p>
+
+  <h2 class="section-title">19. Comprehensive Service Descriptions</h2>
+  <p>
+  Our services include detailed planning, sustainable practices, eco-friendly solutions, and personalized care. We continuously update techniques following horticultural best practices.
+  </p>
+  <p>
+  We emphasize quality materials, expert staff, and adherence to safety standards, ensuring customer satisfaction and environmental stewardship.
+  </p>
+
+  <h2 class="section-title">20. Client Obligations In Detail</h2>
+  <p>
+  Accurate information about your property, specific needs, and possible hazards allow us to tailor services effectively and safely. Maintain clear access areas, inform us about pets, children, or other occupants, and share any concerns.
+  </p>
+  <p>
+  Cooperation results in optimal outcomes and smoother service experiences.
+  </p>
+
+  <h2 class="section-title">21. Payment and Refund Processes Expanded</h2>
+  <p>
+  We offer flexible payment methods, including installment plans for large projects. All payment data is handled securely. Refunds are assessed on a case-by-case basis, factoring service stage and satisfaction.
+  </p>
+
+  <h2 class="section-title">22. Scheduling Best Practices</h2>
+  <p>
+  Early scheduling helps secure preferred dates and allows us to allocate resources effectively. Please notify us promptly for any changes to minimize inconvenience.
+  </p>
+
+  <h2 class="section-title">23. Customer Support</h2>
+  <p>
+  Our customer service team is available to address your questions, schedule appointments, and manage feedback. Contact via phone or email during business hours.
+  </p>
+
+  <h2 class="section-title">24. Safety Policies</h2>
+  <p>
+  We adhere to strict safety protocols to protect you, your property, and our staff. Equipment is regularly inspected, and hazardous situations assessed.
+  </p>
+
+  <h2 class="section-title">25. Environmental Commitment</h2>
+  <p>
+  Sustainability is a core value. We use organic products where possible, promote water conservation, and support biodiversity through thoughtful landscaping.
+  </p>
+
+  <h2 class="section-title">26. Intellectual Property Rights Detail</h2>
+  <p>
+  Our website graphics, text, branding, and methodology are proprietary. Unauthorized copying or distribution is prohibited by law.
+  </p>
+
+  <h2 class="section-title">27. Privacy and Data Protection Policies</h2>
+  <p>
+  Refer to our <a href="privacy.html">Privacy Policy</a> for extensive details on data handling and your rights.
+  </p>
+
+  <h2 class="section-title">28. User Account Responsibilities</h2>
+  <p>
+  Protect your account credentials, notify us of unauthorized use, and update your information promptly to maintain accurate records.
+  </p>
+
+  <h2 class="section-title">29. Limitation on Liability and Indemnification</h2>
+  <p>
+  Neither party shall be liable for indirect damages. You agree to indemnify us for claims arising from your misuse or breach of terms.
+  </p>
+
+  <h2 class="section-title">30. Termination and Suspension Details</h2>
+  <p>
+  We may suspend or terminate your account or services for violations or non-payment. Termination does not affect rights or obligations accrued prior.
+  </p>
+
+  <h2 class="section-title">31. Disputes and Arbitration</h2>
+  <p>
+  Disputes will be resolved through arbitration to provide a cost-effective resolution.
+  </p>
+
+  <h2 class="section-title">32. Contact Information for Legal Notices</h2>
+  <p>
+  Legal notices may be sent to:
+  </p>
+  <p>
+  Lush Pluse Gardening<br />
+  55 Clark St, Brooklyn, NY 11201, USA<br />
+  Phone: (800) 232-7898<br />
+  Email: legal@lushplusegardening.com
+  </p>
+
+  <h2 class="section-title">33. Additional Customer Guidelines</h2>
+  <p>
+  We encourage customers to maintain clear communications and provide feedback to help us improve and serve better.
+  </p>
+
+  <h2 class="section-title">34. Force Majeure Expanded</h2>
+  <p>
+  In events of force majeure such as natural disasters, epidemic, war, or strikes, we shall not be liable for delays or non-performance. We commit to resuming services promptly when conditions allow.
+  </p>
+
+  <h2 class="section-title">35. Miscellaneous</h2>
+  <p>
+  Headings are for convenience only and do not affect interpretation. No partnership or agency relationship is created through these Terms.
+  </p>
+
+  <h2 class="section-title">36. Feedback and Suggestions</h2>
+  <p>
+  Feedback may be used freely to improve services without obligation.
+  </p>
+
+  <h2 class="section-title">37. Service Modifications and Updates</h2>
+  <p>
+  We reserve the right to change services, pricing, or policies with notice appropriate to the changes.
+  </p>
+
+  <h2 class="section-title">38. Governing Jurisdiction</h2>
+  <p>
+  These Terms are governed by New York law; disputes are subject to venue in New York.
+  </p>
+
+  <p>
+  Thank you for choosing Lush Pluse Gardening. We seek to deliver quality while maintaining transparency and fairness in all our dealings.
+  </p>
+</main>
+
+<footer role="contentinfo">
+  <div class="container">
+    <address>
+      55 Clark St, Brooklyn, NY 11201, USA<br />
+      Phone: (800) 232-7898
+    </address>
+    <p>© 2024 Lush Pluse Gardening. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  const hamburger = document.querySelector('.hamburger');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  hamburger.addEventListener('click', () => {
+    const expanded = hamburger.getAttribute('aria-expanded') === 'true';
+    hamburger.setAttribute('aria-expanded', String(!expanded));
+    mobileMenu.classList.toggle('show');
+  });
+
+  mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.remove('show');
+      hamburger.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if(event.key === 'Escape' && mobileMenu.classList.contains('show')) {
+      mobileMenu.classList.remove('show');
+      hamburger.setAttribute('aria-expanded', 'false');
+      hamburger.focus();
+    }
+  });
+</script>
+</body>
+</html>
+

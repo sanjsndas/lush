@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Contact Us - Lush Pluse Gardening</title>
+<!-- Google Fonts Inter -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&amp;display=swap" rel="stylesheet" />
+<!-- Google Material Icons -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+<style>
+  :root {
+    --color-primary: #2e7d32;
+    --color-secondary: #81c784;
+    --color-accent: #f48fb1;
+    --color-text-primary: #1a1a1a;
+    --color-text-secondary: #6b7280;
+    --color-bg: #f9f9f9;
+    --radius: 12px;
+    --spacing-base: 16px;
+    --transition-duration: 0.3s;
+  }
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: var(--color-bg);
+    color: var(--color-text-primary);
+    line-height: 1.6;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  a {
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: color var(--transition-duration);
+  }
+  a:hover, a:focus {
+    color: var(--color-accent);
+    outline: none;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--radius);
+    display: block;
+  }
+  h1, h2, h3, h4 {
+    color: var(--color-primary);
+    font-weight: 800;
+    margin-bottom: var(--spacing-base);
+    line-height: 1.25;
+  }
+  h1 {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 2.25rem;
+  }
+  h3 {
+    font-size: 1.75rem;
+  }
+  p {
+    color: var(--color-text-secondary);
+    font-size: 1rem;
+    margin-bottom: var(--spacing-base);
+  }
+  ul, ol {
+    margin-left: 1.5em;
+    margin-bottom: var(--spacing-base);
+    color: var(--color-text-secondary);
+  }
+  .visually-hidden {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0,0,0,0) !important;
+    border: 0 !important;
+  }
+  .container {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--spacing-base);
+    padding-right: var(--spacing-base);
+    padding-top: 64px;
+    padding-bottom: 80px;
+  }
+  header {
+    background: #ffffffcc;
+    backdrop-filter: saturate(180%) blur(12px);
+    position: sticky;
+    top: 0;
+    z-index: 101;
+    box-shadow: 0 2px 6px rgba(46, 125, 50, 0.15);
+  }
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-base);
+  }
+  .logo {
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .logo .material-icons {
+    font-size: 32px;
+    color: var(--color-accent);
+  }
+  nav {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+  nav a {
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 8px 0;
+    position: relative;
+  }
+  nav a[aria-current="page"] {
+    color: var(--color-accent);
+    font-weight: 700;
+  }
+  nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    background: var(--color-accent);
+    border-radius: 2px;
+    transition: width var(--transition-duration);
+  }
+  nav a:hover::after,
+  nav a:focus::after {
+    width: 100%;
+  }
+  .hamburger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    color: var(--color-primary);
+  }
+  .hamburger .material-icons {
+    font-size: 32px;
+  }
+  .mobile-menu {
+    display: none;
+    flex-direction: column;
+    gap: 16px;
+    background: #fff;
+    padding: 24px var(--spacing-base);
+    box-shadow: 0 8px 24px rgba(46, 125, 50, 0.15);
+    position: absolute;
+    top: 64px;
+    right: 0;
+    left: 0;
+    z-index: 100;
+  }
+  .mobile-menu.show {
+    display: flex;
+  }
+  main h1 {
+    margin-top: 0;
+    margin-bottom: 32px;
+    text-align: center;
+    font-weight: 900;
+  }
+  form {
+    margin-top: 32px;
+    background: #fff;
+    padding: 32px;
+    border-radius: var(--radius);
+    box-shadow: 0 6px 18px rgba(46, 125, 50, 0.1);
+  }
+  label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--color-primary);
+  }
+  input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 24px;
+    border: 1px solid #ccc;
+    border-radius: var(--radius);
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    resize: vertical;
+  }
+  textarea {
+    min-height: 120px;
+  }
+  button[type="submit"] {
+    background: var(--color-primary);
+    color: #fff;
+    font-weight: 700;
+    padding: 14px 40px;
+    border: none;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: background-color var(--transition-duration);
+    font-size: 1.125rem;
+  }
+  button[type="submit"]:hover,
+  button[type="submit"]:focus {
+    background: var(--color-accent);
+    outline: none;
+  }
+  section.content-section {
+    margin-top: 48px;
+  }
+  section.content-section h2 {
+    margin-bottom: 24px;
+  }
+  section.content-section p {
+    margin-bottom: 20px;
+    text-align: justify;
+  }
+  footer {
+    background: #2e7d32;
+    color: #e6f4ea;
+    padding: 32px var(--spacing-base);
+    text-align: center;
+    font-size: 0.9rem;
+  }
+  footer address {
+    font-style: normal;
+    font-weight: 600;
+    color: #c8e6c9;
+    margin-bottom: 0.5em;
+    display: block;
+  }
+  @media (min-width: 768px) {
+    .hamburger {
+      display: none;
+    }
+    nav {
+      display: flex !important;
+      gap: 32px;
+    }
+    .mobile-menu {
+      display: none !important;
+    }
+  }
+  @media (max-width: 767px) {
+    nav {
+      display: none;
+    }
+    .hamburger {
+      display: block;
+    }
+  }
+  a:focus-visible, button:focus-visible {
+    outline: 3px solid var(--color-accent);
+    outline-offset: 3px;
+  }
+</style>
+</head>
+<body>
+<header role="banner">
+  <div class="header-inner">
+    <a href="index.html" class="logo" aria-label="Lush Pluse Gardening Home">
+      <span class="material-icons" aria-hidden="true">local_florist</span>
+      Lush Pluse Gardening
+    </a>
+    <nav aria-label="Primary navigation">
+      <a href="index.html" tabindex="0">Home</a>
+        <a href="privacy.html" tabindex="0">Privacy</a>
+        <a href="terms.html" tabindex="0">Terms & conditons</a>
+        <a href="cookies.html"tabindex="0">Cookies</a>
+        <a href="contact.html" tabindex="0"aria-current="page">Contact us</a>
+    </nav>
+    <button class="hamburger" aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle menu">
+      <span class="material-icons">menu</span>
+    </button>
+  </div>
+  <nav id="mobile-menu" class="mobile-menu" aria-label="Mobile navigation">
+      <a href="index.html" tabindex="0">Home</a>
+        <a href="privacy.html" tabindex="0">Privacy</a>
+        <a href="terms.html" tabindex="0">Terms & conditons</a>
+        <a href="cookies.html"tabindex="0">Cookies</a>
+        <a href="contact.html" tabindex="0"aria-current="page">Contact us</a>
+  </nav>
+</header>
+
+<main class="container" tabindex="-1" role="main">
+  <h1>Contact Us</h1>
+
+  <p>
+    We appreciate your interest in Lush Pluse Gardening. Your questions, feedback, and inquiries are very important to us. Whether you want to schedule a consultation, ask about our services, or get expert advice on your garden, our knowledgeable team is here to help you in any way possible.
+  </p>
+  <p>
+    Our dedicated customer support professionals aim to respond promptly and thoughtfully, ensuring that every interaction with us is pleasant and informative. We encourage you to reach out via the contact form, email, phone, or even social media.
+  </p>
+
+  <form id="contact-form" aria-label="Contact form with fields for name, email, phone, subject, and message">
+    <label for="name">Full Name *</label>
+    <input type="text" id="name" name="name" required placeholder="Your full name" />
+
+    <label for="email">Email Address *</label>
+    <input type="email" id="email" name="email" required placeholder="you@example.com" />
+
+    <label for="phone">Phone Number *</label>
+    <input type="tel" id="phone" name="phone" required placeholder="(800) 232-7898" pattern="[\(]?\d{3}[\)]?[\s\-]?\d{3}[\-]?\d{4}" />
+
+    <label for="subject">Subject *</label>
+    <input type="text" id="subject" name="subject" required placeholder="Subject of your message" />
+
+    <label for="message">Message *</label>
+    <textarea id="message" name="message" required placeholder="Write your message here"></textarea>
+
+    <button type="submit">Send Message</button>
+  </form>
+
+  <section class="content-section" aria-label="Contact Information">
+    <h2>Our Contact Information</h2>
+    <p><strong>Address:</strong> 55 Clark St, Brooklyn, NY 11201, USA</p>
+    <p><strong>Phone:</strong> (800) 232-7898</p>
+    <p><strong>Email:</strong> contact@lushplusegardening.com</p>
+    <p><strong>Business Hours:</strong> Monday to Friday: 8:00 AM - 6:00 PM, Saturday: 9:00 AM - 3:00 PM, Sunday: Closed</p>
+  </section>
+
+  <section class="content-section" aria-label="Gardening Frequently Asked Questions">
+    <h2>Frequently Asked Questions</h2>
+    <dl>
+      <dt>When is the best time to plant flowers and shrubs?</dt>
+      <dd>Spring and fall are ideal because of moderate temperatures and rainfall. However, it depends on your zone and species; consulting our experts can provide personalized advice.</dd>
+
+      <dt>How often should I water my garden?</dt>
+      <dd>Generally, deep watering once or twice a week is better than daily light watering. Factors like plant type, soil, and weather influence watering frequency.</dd>
+
+      <dt>How do you handle pest management?</dt>
+      <dd>We use integrated pest management techniques prioritizing organic and environmentally safe methods to protect your plants and the broader ecosystem.</dd>
+
+      <dt>Do you offer landscape design consultations?</dt>
+      <dd>Yes, we work with you to create custom garden designs that fit your preferences, style, and home environment.</dd>
+
+      <dt>Can I schedule regular maintenance?</dt>
+      <dd>We offer seasonal and year-round maintenance plans tailored to your yard's needs.</dd>
+    </dl>
+  </section>
+
+  <section class="content-section" aria-label="Gardening Tips and Resources">
+    <h2>Extensive Gardening Tips and Resources</h2>
+    <p>To help you cultivate a beautiful and healthy garden, here are some detailed tips and best practices you might find useful:</p>
+    <ul>
+      <li><strong>Soil Testing:</strong> Understand your soil composition and pH to amend and fertilize appropriately for optimal plant growth.</li>
+      <li><strong>Plant Selection:</strong> Choose native and climate-suited plants for easier maintenance and sustainability.</li>
+      <li><strong>Watering Strategies:</strong> Use drip irrigation and rainwater harvesting to conserve water and keep plants hydrated.</li>
+      <li><strong>Mulching:</strong> Retain soil moisture, suppress weeds, and improve soil quality naturally.</li>
+      <li><strong>Seasonal Pruning:</strong> Promote robust growth and shape plants strategically.</li>
+      <li><strong>Composting:</strong> Turn garden waste into nutrient-rich compost to enrich soil.</li>
+      <li><strong>Integrated Pest Management:</strong> Balance controlling pests effectively while preserving beneficial insects.</li>
+      <li><strong>Creating Wildlife Habitats:</strong> Attract pollinators and birds for a lively ecosystem.</li>
+      <li><strong>Landscape Lighting:</strong> Extend usability of outdoor spaces and enhance ambiance at night.</li>
+    </ul>
+    <p>Our team is always ready to provide customized advice and services to suit your specific gardening goals.</p>
+  </section>
+
+  <section class="content-section" aria-label="Gardening Blog and Updates">
+    <h2>Latest Gardening Trends and Updates</h2>
+    <p>Lush Pluse Gardening is committed to keeping you informed about recent developments in horticulture and landscaping. Stay tuned for our regular blog posts covering:</p>
+    <ol>
+      <li>Innovative organic gardening techniques</li>
+      <li>Water-efficient landscaping designs</li>
+      <li>DIY garden projects and seasonal checklists</li>
+      <li>Insights on urban gardening and container planting</li>
+      <li>Interviews with gardening experts and enthusiasts</li>
+      <li>Upcoming events, workshops, and seminars</li>
+      <li>Product reviews including tools, fertilizers, and equipment</li>
+    </ol>
+    <p>We encourage you to subscribe to our newsletter and follow us on social media to never miss out on valuable gardening insights.</p>
+  </section>
+
+  <section class="content-section" aria-label="Get Involved and Community">
+    <h2>Get Involved with Our Gardening Community</h2>
+    <p>
+      Gardening is more enjoyable when shared with others. Join our gardening community to:
+    </p>
+    <ul>
+      <li>Participate in community garden projects and volunteer opportunities</li>
+      <li>Attend gardening workshops for all skill levels</li>
+      <li>Share your gardening stories, photos, and tips</li>
+      <li>Access exclusive gardening resources, discounts, and events</li>
+      <li>Contribute to our ongoing environmental and educational initiatives</li>
+    </ul>
+    <p>
+      Connect with us via email, social media, or during your next visit to get involved and make your gardening experience even richer.
+    </p>
+  </section>
+
+  <section class="content-section" aria-label="Safety and Environmental Commitment">
+    <h2>Our Commitment to Safety and Environment</h2>
+    <p>
+      Safety is a top priority in our gardening operations. Our trained staff follow all safety protocols, use protective gear, and employ proper handling of equipment and chemicals to protect you, your family, and the environment.
+    </p>
+    <p>
+      We are committed to sustainable gardening practices that enhance the environment by:
+    </p>
+    <ul>
+      <li>Utilizing organic fertilizers and pest control methods</li>
+      <li>Implementing water conservation techniques</li>
+      <li>Promoting biodiversity and habitat preservation</li>
+      <li>Reducing waste through composting and recycling initiatives</li>
+      <li>Supporting local nurseries and eco-friendly products</li>
+    </ul>
+    <p>
+      Together with you, we strive to create beautiful gardens that are safe, sustainable, and environmentally responsible.
+    </p>
+  </section>
+
+  <section class="content-section" aria-label="Help and Support Information">
+    <h2>Additional Help and Support</h2>
+    <p>
+      We understand not everyone is an expert gardener, and questions arise frequently. Here’s how we support you:
+    </p>
+    <ul>
+      <li>Comprehensive telephone and email support during business hours</li>
+      <li>Step-by-step guides and FAQs on our website</li>
+      <li>Personalized consultations and in-person visits</li>
+      <li>Seasonal reminders for key gardening tasks</li>
+      <li>Workshops and one-on-one coaching sessions</li>
+    </ul>
+    <p>
+      Whatever your gardening challenges or aspirations, our experts are here to guide you and help your garden flourish.
+    </p>
+  </section>
+
+  <section class="content-section" aria-label="Contact form usage and privacy">
+    <h2>Privacy and Use of Information Submitted</h2>
+    <p>
+      When you submit the contact form on this page, the information provided is used solely to respond to your inquiry and improve our services. We do not share your personal details with third parties without your consent, in accordance with our <a href="privacy.html">Privacy Policy</a>.
+    </p>
+    <p>
+      Please ensure your information is accurate to facilitate efficient communication and resolution of your requests.
+    </p>
+  </section>
+
+  <section class="content-section" aria-label="Technical support and Accessibility">
+    <h2>Technical Support and Accessibility</h2>
+    <p>
+      Our website complies with current accessibility standards to provide an inclusive experience. If you encounter issues or require special assistance navigating the site or contacting us, please let us know.
+    </p>
+    <p>
+      We welcome feedback on how to improve access and usability for all users.
+    </p>
+  </section>
+
+</main>
+
+<footer role="contentinfo">
+  <div class="container">
+    <address>
+      55 Clark St, Brooklyn, NY 11201, USA<br />
+      Phone: (800) 232-7898
+    </address>
+    <p>© 2024 Lush Pluse Gardening. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  const hamburger = document.querySelector('.hamburger');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  hamburger.addEventListener('click', () => {
+    const expanded = hamburger.getAttribute('aria-expanded') === 'true';
+    hamburger.setAttribute('aria-expanded', String(!expanded));
+    mobileMenu.classList.toggle('show');
+  });
+
+  mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.remove('show');
+      hamburger.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if(event.key === 'Escape' && mobileMenu.classList.contains('show')) {
+      mobileMenu.classList.remove('show');
+      hamburger.setAttribute('aria-expanded', 'false');
+      hamburger.focus();
+    }
+  });
+</script>
+</body>
+</html>
+

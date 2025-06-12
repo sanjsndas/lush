@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Lush Pluse Gardening Services</title>
+<!-- Google Fonts Inter -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+<!-- Google Material Icons -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+<style>
+  :root {
+    --color-primary: #2e7d32;
+    --color-secondary: #81c784;
+    --color-accent: #f48fb1;
+    --color-text-primary: #1a1a1a;
+    --color-text-secondary: #6b7280;
+    --color-bg: #f9f9f9;
+    --radius: 12px;
+    --spacing-base: 16px;
+    --transition-duration: 0.3s;
+  }
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: var(--color-bg);
+    color: var(--color-text-primary);
+    line-height: 1.6;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  a {
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: color var(--transition-duration);
+  }
+  a:hover, a:focus {
+    color: var(--color-accent);
+    outline: none;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--radius);
+    display: block;
+  }
+  h1, h2, h3, h4 {
+    color: var(--color-primary);
+    font-weight: 800;
+    margin-bottom: var(--spacing-base);
+    line-height: 1.25;
+  }
+  h1 {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 2.25rem;
+  }
+  h3 {
+    font-size: 1.75rem;
+  }
+  p {
+    color: black;
+    font-size: 1rem;
+    margin-bottom: var(--spacing-base);
+  }
+  /* Utilities */
+  .visually-hidden {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0,0,0,0) !important;
+    border: 0 !important;
+  }
+  .container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--spacing-base);
+    padding-right: var(--spacing-base);
+  }
+  header {
+    background: #ffffffcc;
+    backdrop-filter: saturate(180%) blur(12px);
+    position: sticky;
+    top: 0;
+    z-index: 101;
+    box-shadow: 0 2px 6px rgba(46, 125, 50, 0.15);
+  }
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+  }
+  .logo {
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .logo .material-icons {
+    font-size: 32px;
+    color: var(--color-accent);
+  }
+  nav {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+  nav a {
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 8px 0;
+    position: relative;
+  }
+  nav a[aria-current="page"] {
+    color: var(--color-accent);
+    font-weight: 700;
+  }
+  nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    background: var(--color-accent);
+    border-radius: 2px;
+    transition: width var(--transition-duration);
+  }
+  nav a:hover::after,
+  nav a:focus::after {
+    width: 100%;
+  }
+  .hamburger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    color: var(--color-primary);
+  }
+  .hamburger .material-icons {
+    font-size: 32px;
+  }
+  .mobile-menu {
+    display: none;
+    flex-direction: column;
+    gap: 16px;
+    background: #fff;
+    padding: 24px var(--spacing-base);
+    box-shadow: 0 8px 24px rgba(46, 125, 50, 0.15);
+    position: absolute;
+    top: 64px;
+    right: 0;
+    left: 0;
+    z-index: 100;
+  }
+  .mobile-menu.show {
+    display: flex;
+  }
+  .hero {
+    background: linear-gradient(135deg, rgba(244, 143, 177, 0.1), rgba(129, 199, 132, 0.1)), url('https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/31549ee6-f6cc-4d3b-91b9-c3270ab84125.png') no-repeat center/cover;
+    padding: 96px var(--spacing-base) 80px;
+    color: var(--color-primary);
+    text-align: center;
+    position: relative;
+  }
+  .hero h1 {
+    font-size: 3.75rem;
+    margin-bottom: 24px;
+    font-weight: 900;
+    text-shadow: 1px 1px 4px rgba(255 255 255 / 0.7);
+  }
+  .hero p {
+    font-size: 1.25rem;
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 600;
+    text-shadow: 1px 1px 3px rgba(255 255 255 / 0.5);
+  }
+  .btn-primary {
+    margin-top: 32px;
+    background: var(--color-primary);
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.125rem;
+    padding: 16px 48px;
+    border: none;
+    border-radius: var(--radius);
+    cursor: pointer;
+    box-shadow: 0 8px 15px rgba(46, 125, 50, 0.35);
+    transition: background-color var(--transition-duration);
+  }
+  .btn-primary:hover,
+  .btn-primary:focus {
+    background: var(--color-accent);
+    outline: none;
+  }
+  .services {
+    padding: 64px var(--spacing-base) 64px;
+    background: #fff;
+    border-radius: var(--radius);
+    box-shadow: 0 6px 18px rgba(46, 125, 50, 0.1);
+    margin-bottom: 48px;
+  }
+  .services h2 {
+    text-align: center;
+    margin-bottom: 48px;
+    color: var(--color-primary);
+  }
+  .services-grid {
+    display: grid;
+    gap: 32px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    justify-items: center;
+  }
+  .service-card {
+    background: #f9faf9;
+    border-radius: var(--radius);
+    padding: 16px 24px 32px;
+    box-shadow: 0 0 8px rgba(46, 125, 50, 0.06);
+    width: 100%;
+    max-width: 340px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform var(--transition-duration);
+  }
+  .service-card:hover,
+  .service-card:focus-within {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(46, 125, 50, 0.15);
+  }
+  .service-image-container {
+    width: 100%;
+    overflow: hidden;
+    border-radius: var(--radius);
+    margin-bottom: 16px;
+  }
+  .service-image-container img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: var(--radius);
+    transition: transform 0.3s ease;
+  }
+  .service-image-container img:hover,
+  .service-image-container img:focus {
+    transform: scale(1.05);
+  }
+  .service-card .material-icons {
+    font-size: 40px;
+    color: var(--color-primary);
+    margin-bottom: 12px;
+  }
+  .service-card h3 {
+    margin-bottom: 16px;
+    color: var(--color-primary);
+  }
+  .service-card p {
+    margin-bottom: 24px;
+    font-size: 1rem;
+    color: var(--color-text-secondary);
+    line-height: 1.5;
+  }
+  .service-price {
+    font-weight: 700;
+    font-size: 1.125rem;
+    color: var(--color-accent);
+  }
+  .gallery {
+    padding: 64px var(--spacing-base);
+    background: linear-gradient(135deg, #e8f5e9 0%, #fce4ec 100%);
+    border-radius: var(--radius);
+    margin-bottom: 48px;
+  }
+  .gallery h2 {
+    text-align: center;
+    margin-bottom: 48px;
+    color: var(--color-primary);
+  }
+  .gallery-grid {
+    display: grid;
+    gap: 24px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+  .gallery-item {
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: 0 6px 12px rgba(46, 125, 50, 0.1);
+  }
+  .gallery-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+  .gallery-item:hover img,
+  .gallery-item:focus-within img {
+    transform: scale(1.05);
+  }
+  .articles {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 64px;
+  }
+  .articles h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--color-primary);
+  }
+  .article {
+    margin-bottom: 48px;
+  }
+  .article h3 {
+    margin-bottom: 12px;
+  }
+  .disclaimer {
+    background: #fff3f3;
+    border-left: 5px solid var(--color-accent);
+    color: #7f1d1d;
+    padding: 24px;
+    max-width: 900px;
+    margin: 0 auto 64px;
+    font-size: 0.9rem;
+    border-radius: var(--radius);
+  }
+  .customer-satisfaction {
+    background: #e8f5e9;
+    padding: 48px var(--spacing-base);
+    border-radius: var(--radius);
+    color: var(--color-primary);
+    box-shadow: 0 10px 24px rgba(46, 125, 50, 0.15);
+    text-align: center;
+    margin-bottom: 64px;
+    position: relative;
+  }
+  .customer-satisfaction .material-icons {
+    font-size: 64px;
+    color: var(--color-accent);
+    margin-bottom: 16px;
+  }
+  .customer-satisfaction h2 {
+    font-weight: 800;
+    font-size: 2.5rem;
+    margin-bottom: 16px;
+  }
+  .customer-satisfaction p {
+    font-weight: 600;
+    font-size: 1.25rem;
+    color: var(--color-text-primary);
+  }
+  footer {
+    background: #2e7d32;
+    color: #e6f4ea;
+    padding: 40px var(--spacing-base);
+    text-align: center;
+    font-size: 0.9rem;
+  }
+  footer address {
+    font-style: normal;
+    font-weight: 600;
+    color: #c8e6c9;
+  }
+  @media (min-width: 768px) {
+    .hamburger {
+      display: none;
+    }
+    nav {
+      display: flex !important;
+      gap: 32px;
+    }
+    .mobile-menu {
+      display: none !important;
+    }
+  }
+  @media (min-width: 1024px) {
+    .hero {
+      padding: 120px var(--spacing-base) 100px;
+    }
+    .hero h1 {
+      font-size: 4.5rem;
+    }
+    .articles {
+      max-width: 1000px;
+      padding-bottom: 96px;
+    }
+  }
+  @media (min-width: 1440px) {
+    .container {
+      max-width: 1400px;
+    }
+  }
+  @media (max-width: 767px) {
+    nav {
+      display: none;
+    }
+    .hamburger {
+      display: block;
+    }
+  }
+  a:focus-visible, button:focus-visible {
+    outline: 3px solid var(--color-accent);
+    outline-offset: 3px;
+  }
+  .flower-decoration {
+    pointer-events: none;
+    position: absolute;
+    opacity: 0.12;
+    filter: drop-shadow(0 0 3px rgba(244, 143, 177, 0.3));
+    animation: floaty 8s ease-in-out infinite;
+    will-change: transform;
+  }
+  .flower1 {
+    top: 10%;
+    left: 5%;
+    width: 48px;
+    animation-delay: 0s;
+  }
+  .flower2 {
+    bottom: 20%;
+    right: 10%;
+    width: 62px;
+    animation-delay: 4s;
+  }
+  @keyframes floaty {
+    0%, 100% {
+      transform: translateY(0) rotate(0deg);
+      opacity: 0.15;
+    }
+    50% {
+      transform: translateY(-12px) rotate(15deg);
+      opacity: 0.1;
+    }
+  }
+</style>
+</head>
+<body>
+<header role="banner">
+  <div class="container header-inner">
+    <a href="#" class="logo" aria-label="Lush Pluse Gardening Home">
+      <span class="material-icons" aria-hidden="true">local_florist</span>
+      Lush Pluse Gardening
+    </a>
+    <nav aria-label="Primary navigation">
+     <a href="index.html" tabindex="0"aria-current="page">Home</a>
+        <a href="privacy.html" tabindex="0">Privacy</a>
+        <a href="terms.html" tabindex="0">Terms & conditons</a>
+        <a href="cookies.html"tabindex="0">Cookies</a>
+        <a href="contact.html" tabindex="0">Contact us</a>
+    </nav>
+    <button class="hamburger" aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle menu">
+      <span class="material-icons">menu</span>
+    </button>
+  </div>
+  <nav id="mobile-menu" class="mobile-menu" aria-label="Mobile navigation">
+    <<a href="index.html" tabindex="0"aria-current="page">Home</a>
+        <a href="privacy.html" tabindex="0">Privacy</a>
+        <a href="terms.html" tabindex="0">Terms & conditons</a>
+        <a href="cookies.html"tabindex="0">Cookies</a>
+        <a href="contact.html" tabindex="0">Contact us</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero" role="img" aria-label="Beautiful flower garden with blooming flowers and green gardening">
+    <div class="container">
+      <h1>Welcome to Lush Pluse Gardening</h1>
+      <p>Expert gardening services to bring vibrant life and color to your outdoor space.</p>
+      <button class="btn-primary" onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'});">Explore Our Services</button>
+    </div>
+    <img src="p1.png" alt="Decorative pink flower icon" class="flower-decoration flower1" aria-hidden="true" />
+    <img src="p1.png" alt="Decorative yellow flower icon" class="flower-decoration flower2" aria-hidden="true" />
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="services" tabindex="-1">
+    <h2>Our Gardening Services & Pricing</h2>
+    <div class="services-grid">
+      <article class="service-card" tabindex="0" aria-labelledby="service1-title service1-desc service1-price">
+        <div class="service-image-container">
+          <img src="s1.jpeg" alt="Professional mowing and lawn care with lush green grass" />
+        </div>
+        <span class="material-icons" aria-hidden="true">grass</span>
+        <h3 id="service1-title">Lawn Care & Maintenance</h3>
+        <p id="service1-desc">
+          Our lawn care and maintenance services are designed to keep your outdoor green spaces vibrant, healthy, and perfectly trimmed throughout every season. We employ expert techniques including precise mowing schedules, nutrient-rich fertilizations, and thorough aeration to ensure your lawn maintains a lush, green appearance. We tailor our services to local climate conditions and seasonal demands to maximize lawn vitality and curb appeal.
+        </p>
+        <div class="service-price" id="service1-price">$50 / visit</div>
+      </article>
+      <article class="service-card" tabindex="0" aria-labelledby="service2-title service2-desc service2-price">
+        <div class="service-image-container">
+          <img src="s2.jpeg" alt="Beautiful flower bed design with blooming multicolor flowers" />
+        </div>
+        <span class="material-icons" aria-hidden="true">local_florist</span>
+        <h3 id="service2-title">Flower Bed Design & Planting</h3>
+        <p id="service2-desc">
+          We specialize in designing and planting stunning flower beds uniquely crafted to fit your garden's aesthetic and environment. From selecting native seasonal flowers that flourish naturally to creating vibrant color palettes and artistic arrangements, our planting services transform your space into a fragrant, colorful sanctuary. We carefully prepare soil beds and provide ongoing care advice for long-lasting floral displays.
+        </p>
+        <div class="service-price" id="service2-price">$150 / project</div>
+      </article>
+      <article class="service-card" tabindex="0" aria-labelledby="service3-title service3-desc service3-price">
+        <div class="service-image-container">
+          <img src="s3.jpeg" alt="Professional tree pruning with gardener using tools on a large tree" />
+        </div>
+        <span class="material-icons" aria-hidden="true">park</span>
+        <h3 id="service3-title">Tree Pruning & Removal</h3>
+        <p id="service3-desc">
+          Proper tree pruning is vital for the health and longevity of your trees. Our professional services include removing dead or hazardous branches, shaping trees for optimal growth, and safely removing unwanted or dangerous trees when necessary. We comply with safety regulations to protect your property and promote healthy ecosystems within your garden.
+        </p>
+        <div class="service-price" id="service3-price">$100 / hour</div>
+      </article>
+      <article class="service-card" tabindex="0" aria-labelledby="service4-title service4-desc service4-price">
+        <div class="service-image-container">
+          <img src="s4.jpeg" alt="Eco-friendly pest and weed control treatment using natural products" />
+        </div>
+        <span class="material-icons" aria-hidden="true">eco</span>
+        <h3 id="service4-title">Organic Pest & Weed Control</h3>
+        <p id="service4-desc">
+          Protect your garden with our environmentally-conscious organic pest and weed control solutions. We utilize safe, natural products and techniques that effectively eliminate common garden pests and invasive weeds while preserving beneficial insect populations and maintaining soil health. Our programs are designed to reduce chemical exposure while protecting your plants and boosting natural resilience.
+        </p>
+        <div class="service-price" id="service4-price">$75 / visit</div>
+      </article>
+      <article class="service-card" tabindex="0" aria-labelledby="service5-title service5-desc service5-price">
+        <div class="service-image-container">
+          <img src="s5.jpeg" alt="Installation and repair of watering irrigation system in garden" />
+        </div>
+        <span class="material-icons" aria-hidden="true">waves</span>
+        <h3 id="service5-title">Irrigation System Installation & Repair</h3>
+        <p id="service5-desc">
+          Our irrigation installation and repair services deliver efficient watering solutions tailored to your garden’s specific needs, ensuring optimal hydration for plants and lawns. We design and maintain automated sprinkler systems and drip irrigation layouts to conserve water while promoting plant health, adjusting regularly for seasonal changes and system functionality.
+        </p>
+        <div class="service-price" id="service5-price">$200+ / system</div>
+      </article>
+      <article class="service-card" tabindex="0" aria-labelledby="service6-title service6-desc service6-price">
+        <div class="service-image-container">
+          <img src="s6.jpeg" alt="Garden illuminated with decorative landscape lighting at night" />
+        </div>
+        <span class="material-icons" aria-hidden="true">brightness_high</span>
+        <h3 id="service6-title">Landscape Lighting & Decoration</h3>
+        <p id="service6-desc">
+          Enhance the beauty and functionality of your garden with our professional landscape lighting and decorative services. We install ambient, pathway, and accent lighting designs that highlight key garden features, improve safety, and create enchanting nighttime atmospheres, all while using energy-efficient and customizable lighting solutions.
+        </p>
+        <div class="service-price" id="service6-price">$120+ / project</div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="gallery" tabindex="-1" aria-label="Gallery of gardening and flower images">
+    <h2>Garden Gallery</h2>
+    <div class="gallery-grid">
+      <div class="gallery-item" tabindex="0">
+        <img src="g1.jpeg" alt="Vibrant flower bed with colorful tulips and daisies under sunlight" />
+      </div>
+      <div class="gallery-item" tabindex="0">
+        <img src="g2.jpeg" alt="Garden path lined with blooming pink cherry blossom trees and green shrubbery" />
+      </div>
+      <div class="gallery-item" tabindex="0">
+        <img src="g3.jpeg" alt="Freshly mowed lush green lawn with striped pattern and a garden bench in the background" />
+      </div>
+      <div class="gallery-item" tabindex="0">
+        <img src="g4.jpeg" alt="Elegant decorative garden lamp post surrounded by flower bushes with glowing lights at dusk" />
+      </div>
+      <div class="gallery-item" tabindex="0">
+        <img src="g5.jpeg" alt="Sprinkler irrigation system watering a large garden lawn with healthy green grass blades" />
+      </div>
+      <div class="gallery-item" tabindex="0">
+        <img src="g6.jpeg" alt="Close-up of colorful roses and lilies in a flower bed with water droplets" />
+      </div>
+      <div class="gallery-item" tabindex="0">
+        <img src="g7.jpeg" alt="Eco-friendly pest and weed control treatment applied carefully to garden plants" />
+      </div>
+      <div class="gallery-item" tabindex="0">
+        <img src="g8.jpeg" alt="Enchanting nighttime garden scene with landscape lighting highlighting flower beds" />
+      </div>
+      <div class="gallery-item" tabindex="0">
+        <img src="g9.jpeg" alt="Artistic flower arrangement with fresh seasonal flowers on a wooden table" />
+      </div>
+      <div class="gallery-item" tabindex="0">
+        <img src="g10.jpeg" alt="Spring gardening activity showing planting new flower bulbs in rich soil" />
+    </div>
+  </section>
+
+  <!-- Gardening Knowledge & Tips Section -->
+  <section class="articles" tabindex="-1" aria-label="Extensive gardening articles and information">
+    <h2>Gardening Knowledge & Tips</h2>
+    <article class="article" aria-labelledby="soil-prep-title">
+      <h3 id="soil-prep-title">Soil Preparation and Fertilization</h3>
+      <p>
+        Successfully growing healthy plants begins with understanding your garden’s soil. The soil serves as the foundation where roots anchor and nutrients are absorbed. Proper soil preparation boosts plant health, growth, and yield dramatically. Before planting, test your soil’s texture, pH, nutrient content, and drainage characteristics using home testing kits or professional services.
+      </p>
+      <p>
+        Depending on test results, amend your soil with organic matter such as compost, aged manure, peat moss, or leaf mold to improve fertility and structure. Well-amended soil retains moisture efficiently while preventing compaction, allowing roots to expand freely. Fertilization must be tailored to plant types and growth stages – nitrogen fuels leafy growth, phosphorus supports root and flower development, and potassium strengthens resistance to disease.
+      </p>
+      <p>
+        Incorporate slow-release fertilizers or organic options to sustain nutrient availability over time and reduce leaching or runoff. Mulching with organic matter like bark or straw further protects soil, conserving moisture, suppressing weeds, and enriching fertility as it decomposes.
+      </p>
+      <p>
+        Every garden has unique soil needs; revisiting these steps annually ensures ongoing soil vitality and a thriving garden.
+      </p>
+    </article>
+
+    <article class="article" aria-labelledby="plant-select-title">
+      <h3 id="plant-select-title">Plant Selection and Arrangement Tips</h3>
+      <p>
+        Choosing the right plants is critical for a successful garden that blossoms with beauty and flowers abundantly. Begin with selecting plant varieties well-suited to your climate zone, soil, and sun exposure. Native plants often require less maintenance and provide vital habitat for local pollinators.
+      </p>
+      <p>
+        Combine plants with complementary characteristics including height, texture, and bloom period to create visual interest year-round. Incorporate a blend of annuals, perennials, and evergreens to cover seasonal gaps. Group plants with similar water and nutrient needs to streamline care and irrigation scheduling.
+      </p>
+      <p>
+        Use principles of horticultural design – repetition, contrast, and balance – to create engaging beds and borders. Consider the mature size of plants to avoid overcrowding and allow airflow which helps reduce fungal diseases.
+      </p>
+      <p>
+        Companion planting can enhance growth and natural pest deterrence; for example, marigolds repel nematodes and attract beneficial insects when planted near vegetables.
+      </p>
+      <p>
+        Finally, factor in pathways and sitting areas to optimize garden usability and enjoyment.
+      </p>
+    </article>
+
+    <article class="article" aria-labelledby="watering-strategies-title">
+      <h3 id="watering-strategies-title">Watering Strategies for Healthy Growth</h3>
+      <p>
+        Water is essential to plant health. Proper watering technique encourages strong root systems and robust growth. Water deeply and infrequently to compel roots to grow lower in the soil, enhancing drought resilience. Shallow, frequent watering encourages roots to stay near the surface, increasing vulnerability to heat stress.
+      </p>
+      <p>
+        Water early in the day when temperatures are cooler to reduce evaporation; avoid evening watering to prevent prolonged leaf moisture and fungal infections. Drip irrigation and soaker hoses target water directly to roots, minimizing waste.
+      </p>
+      <p>
+        Adjust watering frequency and volume by season, plant maturity, soil type, and weather conditions. Sandy soils drain quickly and may require more frequent watering than loamy or clay soils.
+      </p>
+      <p>
+        Rainfall should be accounted for to avoid overwatering. Mulch plays a large part in water retention and temperature moderation.
+      </p>
+      <p>
+        Monitoring soil moisture regularly with a simple finger test or moisture meter can help you adapt your watering routine for peak plant health.
+      </p>
+    </article>
+
+    <article class="article" aria-labelledby="pest-disease-title">
+      <h3 id="pest-disease-title">Pest and Disease Management</h3>
+      <p>
+        Effective pest and disease management is crucial for maintaining garden vitality without relying excessively on harsh chemicals. Integrated Pest Management (IPM) involves monitoring, prevention, and control strategies tailored to specific pests and diseases.
+      </p>
+      <p>
+        Encourage beneficial predatory insects like ladybugs and lacewings that naturally control common pests. Remove diseased or infested plant material promptly to prevent spread. Use physical barriers, traps, and plant repellents as first-line defenses.
+      </p>
+      <p>
+        Organic pesticides based on neem oil, insecticidal soap, or biological controls can be used judiciously with minimal environmental impact. Always correctly identify pest or disease to apply appropriate treatments and prevent resistance.
+      </p>
+      <p>
+        Proper garden hygiene, crop rotation, and diversified planting reduces vulnerability to outbreaks. Healthy plants grown in balanced soil are more resistant to stress and disease.
+      </p>
+      <p>
+        Regular inspections are essential; early detection allows timely intervention preventing severe damage.
+      </p>
+    </article>
+
+    <article class="article" aria-labelledby="seasonal-tips-title">
+      <h3 id="seasonal-tips-title">Seasonal Gardening Tips</h3>
+      <p>
+        Gardening practices vary significantly by season. Spring is the time for soil preparation, planting cool-season crops, and pruning trees. Summer requires vigilant watering, mulching, and pest control to combat heat stress. Fall is ideal for planting bulbs, composting, and preparing soil for winter.
+      </p>
+      <p>
+        Winter gardening focuses on maintenance tasks, tool care, and planning for the next cycle. Adjust fertilizer applications according to growth cycles. Protect sensitive plants from frost with coverings or moving containers indoors.
+      </p>
+      <p>
+        Utilize season-specific planting calendars and local extension service recommendations for optimal timing.
+      </p>
+      <p>
+        Seasonal flowers and foliage changes can be used creatively for year-round garden interest. Succession planting keeps vegetable gardens productive and reduces downtime.
+      </p>
+      <p>
+        Embrace weather variations with adaptive strategies such as rainwater harvesting or shade cloths for drought-prone summers.
+      </p>
+    </article>
+
+    <article class="article" aria-labelledby="pruning-title">
+      <h3 id="pruning-title">Pruning and Maintenance</h3>
+      <p>
+        Pruning stimulates healthy growth, removes dead or diseased branches, and shapes plants for aesthetic appeal. Use clean, sharp tools for precise cuts. Understand the specific pruning requirements for shrubs, trees, and perennials, as timing and technique vary widely.
+      </p>
+      <p>
+        Remove suckers and watersprouts that divert energy. Avoid heavy pruning late in the growing season to prevent winter damage. Deadheading flowers encourages further blooming.
+      </p>
+      <p>
+        General garden maintenance includes weeding, fertilizing, mulching, and debris cleanup. Regular observation allows quick detection of issues.
+      </p>
+      <p>
+        Scheduled maintenance promotes long-term garden health and reduces costly interventions.
+      </p>
+    </article>
+
+    <article class="article" aria-labelledby="sustainable-title">
+      <h3 id="sustainable-title">Sustainable and Eco-Friendly Gardening</h3>
+      <p>
+        Sustainable gardening reduces environmental impact by embracing organic practices, water conservation, and native planting. Composting yard waste turns organic matter into valuable soil amendment. Mulching minimizes water usage and prevents erosion.
+      </p>
+      <p>
+        Use rain barrels or irrigation timers to optimize water use. Avoid synthetic chemicals; instead, nurture beneficial microbes and insects.
+      </p>
+      <p>
+        Choose plants native to your region to support local wildlife. Encourage biodiversity by incorporating varied plant species and habitats.
+      </p>
+      <p>
+        Sustainable gardens benefit the environment while often reducing maintenance needs and costs.
+      </p>
+      <p>
+        Educational resources and community involvement help in developing long-lasting eco-friendly gardening habits.
+      </p>
+    </article>
+  </section>
+
+  <section class="disclaimer" tabindex="-1" aria-label="Disclaimer">
+    <h2>Disclaimer</h2>
+    <p>
+      The information provided on Lush Pluse Gardening's website is for general informational purposes only. All information on the site is provided in good faith, however we make no representation or warranty of any kind, express or implied, regarding the accuracy, adequacy, validity, reliability, availability or completeness of any information or services.
+    </p>
+    <p>
+      Any reliance you place on such information is strictly at your own risk. In no event shall Lush Pluse Gardening be liable for any loss or damage including without limitation, indirect or consequential loss or damage, or any loss or damage whatsoever arising from loss of data or profits arising out of, or in connection with, the use of this website or services.
+    </p>
+    <p>
+      By using our services, you agree to this disclaimer.
+    </p>
+  </section>
+
+  <section class="customer-satisfaction" tabindex="-1" role="region" aria-live="polite" aria-atomic="true">
+    <span class="material-icons" aria-hidden="true">support_agent</span>
+    <h2>Increasing Customer Satisfaction</h2>
+    <p>At Lush Pluse Gardening, customer satisfaction is our highest priority. We focus on personalized service, eco-friendly practices, and continuous improvement to meet and exceed your gardening needs.</p>
+  </section>
+</main>
+
+<footer role="contentinfo">
+  <div class="container">
+    <address>
+      55 Clark St, Brooklyn, NY 11201, USA
+    </address>
+    <p>© 2024 Lush Pluse Gardening. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  const hamburger = document.querySelector('.hamburger');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  hamburger.addEventListener('click', () => {
+    const expanded = hamburger.getAttribute('aria-expanded') === 'true';
+    hamburger.setAttribute('aria-expanded', String(!expanded));
+    mobileMenu.classList.toggle('show');
+  });
+
+  mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.remove('show');
+      hamburger.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && mobileMenu.classList.contains('show')) {
+      mobileMenu.classList.remove('show');
+      hamburger.setAttribute('aria-expanded', 'false');
+      hamburger.focus();
+    }
+  });
+</script>
+</body>
+</html>
+
